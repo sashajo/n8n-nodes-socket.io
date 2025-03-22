@@ -1,6 +1,6 @@
 {
   "name": "@sashajo/n8n-nodes-socketio",
-  "version": "0.1.6",
+  "version": "0.1.7",
   "description": "Listen to Socket.IO events and trigger workflows",
   "keywords": [
     "n8n-community-node-package",
@@ -22,7 +22,8 @@
     "pnpm": ">=9.1"
   },
   "packageManager": "pnpm@9.1.4",
-  "main": "index.js",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
   "scripts": {
     "preinstall": "npx only-allow pnpm",
     "build": "tsc && gulp build:icons",
@@ -33,7 +34,9 @@
     "prepublishOnly": "pnpm build && pnpm lint -c .eslintrc.prepublish.js nodes credentials package.json"
   },
   "files": [
-    "dist"
+    "dist/**/*",
+    "nodes/**/*",
+    "credentials/**/*"
   ],
   "n8n": {
     "n8nNodesApiVersion": 1,
