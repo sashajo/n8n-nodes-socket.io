@@ -6,7 +6,7 @@ This is a node for n8n that allows you to trigger workflows based on Socket.IO e
 
 ## Nodes
 
-- SocketIOTrigger
+- SocketIoNode
 
 ## Functionality
 - Connect to a Socket.IO server with authentication

@@ -10,7 +10,7 @@ import { io, Socket } from 'socket.io-client';
 
 let socket: Socket | null = null;
 
-export class SocketIoTrigger implements INodeType {
+export class SocketIoNode implements INodeType {
   description: INodeTypeDescription = {
     displayName: 'Socket.Io Node',
     name: 'socketIoNode',
