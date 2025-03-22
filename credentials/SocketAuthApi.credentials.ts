@@ -5,10 +5,10 @@ import {
 	INodeProperties,
 } from 'n8n-workflow';
 
-export class SocketAuth implements ICredentialType {
-	name = 'socketAuth';
-	displayName = 'Socket Auth';
-	documentationUrl = '<your-docs-url>';
+export class SocketAuthApi implements ICredentialType {
+	name = 'socketAuthApi';
+	displayName = 'Socket Auth API';
+	documentationUrl = 'https://example.com/docs/auth';
 	properties: INodeProperties[] = [
 		{
 			displayName: 'Token',

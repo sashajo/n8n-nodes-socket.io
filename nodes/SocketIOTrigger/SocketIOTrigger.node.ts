@@ -25,7 +25,7 @@ export class SocketIOTrigger implements INodeType {
     outputs: ['main'],
     credentials: [
 			{
-				name: 'socketAuth',
+				name: 'socketAuthApi',
 				required: false,
 			},
 		],
@@ -78,11 +78,11 @@ export class SocketIOTrigger implements INodeType {
     });
 
     socket.on('connect', () => {
-      this.logger.info('[Socket.IO] Connected to server');
+      this.logger.debug('[Socket.IO] Connected to server');
     });
 
     socket.on(eventName, (data: any) => {
-      this.logger.info(`[Socket.IO] Received event '${eventName}'`, data);
+      this.logger.debug(`[Socket.IO] Received event '${eventName}'`, data);
       this.emit([this.helpers.returnJsonArray([data])]);
     });
 
@@ -94,7 +94,7 @@ export class SocketIOTrigger implements INodeType {
       closeFunction: async () => {
         if (socket) {
           socket.disconnect();
-          this.logger.info('[Socket.IO] Disconnected');
+          this.logger.debug('[Socket.IO] Disconnected');
         }
       },
     };

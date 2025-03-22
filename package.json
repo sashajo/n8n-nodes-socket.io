@@ -1,6 +1,6 @@
 {
-  "name": "n8n-nodes-socket.io",
-  "version": "0.1.0",
+  "name": "@sashajo/n8n-nodes-socketio",
+  "version": "0.1.3",
   "description": "Listen to Socket.IO events and trigger workflows",
   "keywords": [
     "n8n-community-node-package",
@@ -38,10 +38,10 @@
   "n8n": {
     "n8nNodesApiVersion": 1,
     "credentials": [
-      "dist/credentials/SocketAuth.credentials.js"
+      "dist/credentials/SocketAuthApi.credentials.js"
     ],
     "nodes": [
-      "dist/nodes/SocketIOTrigger/SocketIOTrigger.node.js"
+      "dist/nodes/SocketIoTrigger/SocketIoTrigger.node.js"
     ]
   },
   "devDependencies": {
@@ -57,5 +57,8 @@
   },
   "dependencies": {
     "socket.io-client": "^4.8.1"
+  },
+  "publishConfig": {
+    "access": "public"
   }
 }
