@@ -10,7 +10,7 @@ import { io, Socket } from 'socket.io-client';
 
 let socket: Socket | null = null;
 
-export class SocketIOTrigger implements INodeType {
+export class SocketIoTrigger implements INodeType {
   description: INodeTypeDescription = {
     displayName: 'Socket.IO Trigger',
     name: 'socketIoTrigger',
@@ -19,7 +19,7 @@ export class SocketIOTrigger implements INodeType {
     version: 1,
     description: 'Listens to events from a Socket.IO server',
     defaults: {
-      name: 'Socket.IO Trigger',
+      name: 'Socket.Io Trigger',
     },
     inputs: [],
     outputs: ['main'],
