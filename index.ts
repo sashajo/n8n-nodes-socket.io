@@ -4,7 +4,7 @@ import { SocketIoTrigger } from './nodes/SocketIoTrigger/SocketIoTrigger.node';
 export const nodeTypes = [
 	{
 		description: new SocketIoTrigger().description,
-		sourceModulePath: 'nodes/SocketIoTrigger/SocketIoTrigger.node',
+		sourceModulePath: './nodes/SocketIoTrigger/SocketIoTrigger.node',
 		type: new SocketIoTrigger(),
 	},
 ];
