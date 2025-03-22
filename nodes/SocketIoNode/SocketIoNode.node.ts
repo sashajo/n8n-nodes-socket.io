@@ -21,7 +21,7 @@ export class SocketIoTrigger implements INodeType {
     defaults: {
       name: 'Socket.Io Node',
     },
-    inputs: [],
+    inputs: ['main'],
     outputs: ['main'],
     credentials: [
 			{
