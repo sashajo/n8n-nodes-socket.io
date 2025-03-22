@@ -1,6 +1,6 @@
 {
   "name": "@sashajo/n8n-nodes-socketio",
-  "version": "0.1.8",
+  "version": "0.1.9",
   "description": "Listen to Socket.IO events and trigger workflows",
   "keywords": [
     "n8n-community-node-package",
@@ -42,7 +42,7 @@
       "dist/credentials/SocketAuthApi.credentials.js"
     ],
     "nodes": [
-      "dist/nodes/SocketIoTrigger/SocketIoTrigger.node.js"
+      "dist/nodes/SocketIoNode/SocketIoTriggerNode.node.js"
     ]
   },
   "devDependencies": {

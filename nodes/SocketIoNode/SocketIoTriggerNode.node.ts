@@ -12,14 +12,14 @@ let socket: Socket | null = null;
 
 export class SocketIoTrigger implements INodeType {
   description: INodeTypeDescription = {
-    displayName: 'Socket.IO Trigger',
-    name: 'socketIoTrigger',
+    displayName: 'Socket.Io Node',
+    name: 'socketIoNode',
     icon: 'file:logo.svg',
     group: ['trigger'],
     version: 1,
     description: 'Listens to events from a Socket.IO server',
     defaults: {
-      name: 'Socket.Io Trigger',
+      name: 'Socket.Io Node',
     },
     inputs: [],
     outputs: ['main'],
