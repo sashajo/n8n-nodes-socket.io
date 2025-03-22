@@ -63,7 +63,7 @@ export class SocketIOTrigger implements INodeType {
 
   async trigger(this: ITriggerFunctions): Promise<ITriggerResponse> {
     const url = this.getNodeParameter('url', '') as string;
-    const token = (await this.getCredentials('socketAuth'))?.token as string;
+    const token = (await this.getCredentials('socketAuthApi'))?.token as string;
     const path = this.getNodeParameter('path', '') as string;
     const eventName = this.getNodeParameter('eventName', '') as string;
     const channel = this.getNodeParameter('channel', '') as string;
