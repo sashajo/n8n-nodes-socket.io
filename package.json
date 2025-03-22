@@ -1,6 +1,6 @@
 {
   "name": "@sashajo/n8n-nodes-socketio",
-  "version": "0.1.3",
+  "version": "0.1.4",
   "description": "Listen to Socket.IO events and trigger workflows",
   "keywords": [
     "n8n-community-node-package",
