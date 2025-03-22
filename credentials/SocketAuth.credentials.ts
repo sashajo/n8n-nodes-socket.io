@@ -5,9 +5,9 @@ import {
 	INodeProperties,
 } from 'n8n-workflow';
 
-export class HttpBinApi implements ICredentialType {
-	name = 'httpbinApi';
-	displayName = 'HttpBin API';
+export class SocketAuth implements ICredentialType {
+	name = 'socketAuth';
+	displayName = 'Socket Auth';
 	documentationUrl = '<your-docs-url>';
 	properties: INodeProperties[] = [
 		{

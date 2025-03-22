@@ -1,19 +1,21 @@
 {
-  "name": "n8n-nodes-<...>",
+  "name": "n8n-nodes-socket.io",
   "version": "0.1.0",
-  "description": "",
+  "description": "Listen to Socket.IO events and trigger workflows",
   "keywords": [
-    "n8n-community-node-package"
+    "n8n-community-node-package",
+    "socket.io",
+    "socket.io-client"
   ],
   "license": "MIT",
   "homepage": "",
   "author": {
-    "name": "",
-    "email": ""
+    "name": "Sasha Jovicic",
+    "email": "sasha.jo@gmail.com"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/<...>/n8n-nodes-<...>.git"
+    "url": "https://github.com/sashajo/n8n-nodes-socket.io.git"
   },
   "engines": {
     "node": ">=18.10",
@@ -36,12 +38,10 @@
   "n8n": {
     "n8nNodesApiVersion": 1,
     "credentials": [
-      "dist/credentials/ExampleCredentialsApi.credentials.js",
-      "dist/credentials/HttpBinApi.credentials.js"
+      "dist/credentials/SocketAuth.credentials.js"
     ],
     "nodes": [
-      "dist/nodes/ExampleNode/ExampleNode.node.js",
-      "dist/nodes/HttpBin/HttpBin.node.js"
+      "dist/nodes/SocketIOTrigger/SocketIOTrigger.node.js"
     ]
   },
   "devDependencies": {
@@ -54,5 +54,8 @@
   },
   "peerDependencies": {
     "n8n-workflow": "*"
+  },
+  "dependencies": {
+    "socket.io-client": "^4.8.1"
   }
 }
