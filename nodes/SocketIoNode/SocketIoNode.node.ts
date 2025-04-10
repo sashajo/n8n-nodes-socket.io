@@ -78,7 +78,8 @@ export class SocketIoNode implements INodeType {
     });
 
     socket.on('connect', () => {
-      this.logger.debug('[Socket.IO] Connected to server');
+      this.logger.info('[Socket.IO] Connected to server');
+      socket?.emit('joinChannel', channel);
     });
 
     socket.on(eventName, (data: any) => {
@@ -89,12 +90,12 @@ export class SocketIoNode implements INodeType {
     socket.on('connect_error', (err) => {
       this.logger.error('[Socket.IO] Connection error:', err);
     });
-    socket.emit('joinChannel', channel);
+   
     return {
       closeFunction: async () => {
         if (socket) {
           socket.disconnect();
-          this.logger.debug('[Socket.IO] Disconnected');
+          this.logger.info('[Socket.IO] Disconnected');
         }
       },
     };
